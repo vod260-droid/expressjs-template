@@ -20,7 +20,7 @@ try {
         bundle: true,
         minify: true,
         sourcemap: true,
-        outdir: '.zeabur/output/functions/index.func',
+        outfile: '.zeabur/output/functions/index.func/index.js',
         platform: 'node',
         target: 'node20',
     }).then(res => {
