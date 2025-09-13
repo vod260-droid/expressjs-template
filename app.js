@@ -11,7 +11,7 @@ var app = express();
 
 app.all('*', async (req, res) => {
   try {
-    res.send(content);
+    res.send("ewfwefwe");
 });
 
 module.exports = app;
