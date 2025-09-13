@@ -31,13 +31,7 @@ app.all('*', async (req, res) => {
       body: req.body,
       redirect: 'manual' // 不自动跟随重定向，由我们自己处理
     });
-    // 转发状态码
-    res.status(response.status);
-    
-    // 转发响应头
-    response.headers.forEach((value, key) => {
-      res.setHeader(key, value);
-    });
+
     
     // 转发响应内容
     const content = await response.text();
