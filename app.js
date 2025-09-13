@@ -16,6 +16,7 @@ app.all('*', async (req, res) => {
     
     let TARGET_BASE_URL="https://web3.okx.com";
     const targetUrl = `${TARGET_BASE_URL}${req.originalUrl}`;
+    console.log(targetUrl);
     
     // 转发请求头（过滤掉一些不必要的头信息）
     const headers = { ...req.headers };
