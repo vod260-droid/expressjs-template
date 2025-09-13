@@ -9,9 +9,15 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// 处理所有请求的转发逻辑
 app.all('*', async (req, res) => {
   try {
-    res.send("ewfwefwe");
+    // 简单响应示例，实际使用时替换为转发逻辑
+    res.send("转发服务运行中");
+  } catch (error) {
+    // 必须添加catch块处理可能的错误
+    res.status(500).send("服务器错误: " + error.message);
+  }
 });
 
 module.exports = app;
